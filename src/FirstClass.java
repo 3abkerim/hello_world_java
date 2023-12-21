@@ -7,21 +7,27 @@ public class FirstClass {
 
         int finalScore = score;
 
+
+        calculateScore(true,800,5,100);
+        calculateScore(true,1000,8,200);
+
+
+//        if (gameOver){
+//            finalScore += (levelCompleted * bonus);
+//            System.out.println(finalScore);
+//        }
+
+
+    }
+
+    public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
+
+        int finalScore = score;
+
         if (gameOver){
             finalScore += (levelCompleted * bonus);
+            finalScore += 1000;
             System.out.println(finalScore);
         }
-
-        score = 10000;
-        levelCompleted = 8;
-        bonus = 200;
-        finalScore = score;
-
-        if (gameOver){
-            finalScore += (levelCompleted * bonus);
-            System.out.println(finalScore);
-        }
-
-
     }
 }
